@@ -50,5 +50,18 @@ namespace LeetCode.Tests
 
             Assert.That(result, Is.EqualTo(expected));
         }
+
+        // TODO: Needs major improvements on this test
+        [TestCase("kayak", true)]
+        [TestCase("Henry", false)]
+        [TestCase("Henry!", false)]
+        [TestCase("A man, a plan, a canal: Panama", true)]
+        public void PalindromeTest(string s, bool expected)
+        {
+            var palindrome = new Palindrome();
+            var output = palindrome.IsPalindrome(s);
+
+            Assert.That(output, Is.EqualTo(expected));
+        }
     }
 }
