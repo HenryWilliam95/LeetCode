@@ -51,7 +51,6 @@ namespace LeetCode.Tests
             Assert.That(result, Is.EqualTo(expected));
         }
 
-        // TODO: Needs major improvements on this test
         [TestCase("kayak", true)]
         [TestCase("Henry", false)]
         [TestCase("Henry!", false)]
@@ -60,6 +59,16 @@ namespace LeetCode.Tests
         {
             var palindrome = new Palindrome();
             var output = palindrome.IsPalindrome(s);
+
+            Assert.That(output, Is.EqualTo(expected));
+        }
+
+        [TestCase(new int[] { 7, 1, 5, 3, 6, 4 }, 5)]
+        [TestCase(new int[] { 7, 6, 4, 3, 1 }, 0)]
+        public void MaxProfitTest(int[] prices, int expected)
+        {
+            var maxProfit = new BestDayToBuyAndSellStock();
+            var output = maxProfit.MaxProfit(prices);
 
             Assert.That(output, Is.EqualTo(expected));
         }
