@@ -72,5 +72,18 @@ namespace LeetCode.Tests
 
             Assert.That(output, Is.EqualTo(expected));
         }
+
+        [TestCase(121, true)]
+        [TestCase(12, false)]
+        [TestCase(1221, true)]
+        [TestCase(111, true)]
+        [TestCase(12345, false)]
+        public void PalindromeNumberTest(int x, bool expected)
+        {
+            var palindrome = new PalindromeNumber();
+            var output = palindrome.IsPalindrome(x);
+
+            Assert.That(output, Is.EqualTo(expected));
+        }
     }
 }
