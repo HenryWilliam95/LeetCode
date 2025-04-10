@@ -1,4 +1,4 @@
-﻿namespace LeetCode;
+﻿namespace LeetCode.EasyChallenges;
 
 public class Palindrome
 {
@@ -16,7 +16,7 @@ public class Palindrome
                 left++;
             }
 
-            while (left < right && !char.IsLetterOrDigit((char)s[right]))
+            while (left < right && !char.IsLetterOrDigit(s[right]))
             {
                 right--;
             }

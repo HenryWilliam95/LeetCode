@@ -1,4 +1,4 @@
-﻿namespace LeetCode
+﻿namespace LeetCode.EasyChallenges
 {
     internal class BestDayToBuyAndSellStock
     {
@@ -11,7 +11,7 @@
 
             for (int i = 1; i < prices.Length; i++)
             {
-                if(buy > prices[i])
+                if (buy > prices[i])
                 {
                     buy = prices[i];
                     prices[i] = 0;

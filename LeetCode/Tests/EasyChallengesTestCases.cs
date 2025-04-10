@@ -1,9 +1,10 @@
-﻿using NUnit.Framework;
+﻿using LeetCode.EasyChallenges;
+using NUnit.Framework;
 
 namespace LeetCode.Tests
 {
     [TestFixture]
-    internal class TestCases
+    internal class EasyChallengesTestCases
     {
         [TestCase("abcabcbb", 3)]
         [TestCase("bbbbb", 1)]
