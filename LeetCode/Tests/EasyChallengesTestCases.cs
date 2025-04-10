@@ -99,5 +99,37 @@ namespace LeetCode.Tests
 
             Assert.That(output, Is.EqualTo(expected));
         }
+
+        [TestCase(new string[] {"flower", "flow", "flight"}, "fl")]
+        [TestCase(new string[] { "dog", "racecar", "car" }, "")]
+        public void LongestCommonPrefixTest(string[] array, string expected)
+        {
+            var longestCommonPrefix = new LongestCommonPrefix();
+            var output = longestCommonPrefix.Solution(array);
+
+            Assert.That(output, Is.EqualTo(expected));
+        }
+
+        [TestCase("()[]{}", true)]
+        [TestCase(")[]{}", false)]
+        [TestCase("({[]})", true)]
+        public void ValidParanthesesTest(string input, bool expected)
+        {
+            var validParantheses = new ValidParantheses();
+            var output = validParantheses.Solution(input);
+
+            Assert.That(output, Is.EqualTo(expected));
+        }
+
+        [TestCase(new int[] { 1, 2, 3, 1}, true)]
+        [TestCase(new int[] { 1, 3, 3, 1}, true)]
+        [TestCase(new int[] { 1, 2, 3, 4}, false)]
+        public void ContainsDuplicates(int[] input, bool expected)
+        {
+            var containsDuplicates = new ContainsDuplicates();
+            var output = containsDuplicates.Solution(input);
+
+            Assert.That(output, Is.EqualTo(expected));
+        }
     }
 }
