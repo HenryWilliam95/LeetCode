@@ -86,5 +86,18 @@ namespace LeetCode.Tests
 
             Assert.That(output, Is.EqualTo(expected));
         }
+
+        [TestCase("III", 3)]
+        [TestCase("IV", 4)]
+        [TestCase("X", 10)]
+        [TestCase("MMCD", 2400)]
+        [TestCase("MMCDII", 2402)]
+        public void RomanToIntTest(string romanNumerals, int expected)
+        {
+            var romanConverter = new RomanToInt();
+            var output = romanConverter.Convert(romanNumerals);
+
+            Assert.That(output, Is.EqualTo(expected));
+        }
     }
 }
