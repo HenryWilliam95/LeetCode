@@ -8,10 +8,8 @@
 
             for (int i = 0; i < nums.Length; i++)
             {
-                if(hashTable.ContainsKey(nums[i]))
+                if(!hashTable.TryAdd(nums[i], i))
                     return true;
-                else 
-                    hashTable.Add(nums[i], i);
             }
 
             return false;
