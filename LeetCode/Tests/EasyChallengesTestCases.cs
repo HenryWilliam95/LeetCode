@@ -131,5 +131,16 @@ namespace LeetCode.Tests
 
             Assert.That(output, Is.EqualTo(expected));
         }
+
+        [TestCase(new int[] { 5, 5, 5, 4, 2 }, 2, 2)]
+        [TestCase(new int[] { 2, 1, 2 }, 2, -1)]
+        [TestCase(new int[] { 9, 7, 5, 3 }, 1, 4)]
+        public void MinimumOperationsArrayTest(int[] input, int k, int expected)
+        {
+            var minimumOperationsArray = new MinimumOperationsArray();
+            var output = minimumOperationsArray.Solution(input, k);
+
+            Assert.That(output, Is.EqualTo(expected));
+        }
     }
 }
